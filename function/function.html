@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: rgb(100, 100, 30);
+        }
+    </style>
+
+
+
+    <script type="text/javascript">
+
+        // Aula de funções
+
+        document.write(subtrai(14,4) + '<br>')
+
+        var soma = function(a,b){
+            return a + b;
+        };
+
+        document.write(soma(2,54) + '<br>');
+
+        function subtrai(a,b){
+            return a - b;
+        };
+
+        // a e b poderia ser qualquer outra letra ou nome, mas se alterar na funtion
+        // tem que alterar no return tambem.
+
+        nomeCompleto('Ana','Denicoli');
+        
+        function nomeCompleto(nome,sobrenome){
+            document.write('Seu nome:  '+nome+' '+sobrenome+' <br> ');
+        }
+
+
+        //calculate
+
+
+        function calculadora(numA,numB,op){
+            if (op == 'somar'){
+                return numA + numB;
+            } else if (op == 'subtrair'){
+                return numA - numB;
+            } else if (op == 'multiplicar') {
+                return numA * numB;
+            } else if (op == 'dividir') {
+                return numA / numB;
+            } else {
+                return 'Esse operador não existe';
+            }
+        }
+
+        document.write(calculadora(4,2,'somar') + '<br>');
+        document.write(calculadora(4,2,'subtrair') + '<br>');
+        document.write(calculadora(4,2,'multiplicar') + '<br>' );
+        document.write(calculadora(4,2,'dividir') + '<br>' );
+
+
+        // calculadora usando prompt
+
+        function calculator() {
+  var numero1 = parseFloat(prompt("Digite o primeiro número:"));
+  var numero2 = parseFloat(prompt("Digite o segundo número:"));
+  var op = prompt("Digite a operação (soma, subtrair, multiplicar, dividir):");
+
+  var resultado;
+
+  if (op === "soma") {
+    resultado = numero1 + numero2;
+  } else if (op === "subtrair") {
+    resultado = numero1 - numero2;
+  } else if (op === "multiplicar") {
+    resultado = numero1 * numero2;
+  } else if (op === "dividir") {
+    resultado = numero1 / numero2;
+  } else {
+    document.write("Operação inválida!");
+    return;
+  }
+
+     document.write("O resultado é: " + resultado);
+}
+
+// Chamada da função calculadora
+calculator();
+
+    </script>
+</body>
+</html>
+
+
+
